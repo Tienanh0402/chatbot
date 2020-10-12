@@ -2,9 +2,7 @@ const APP_SECRET = 'yo61563bc701140312116ee66ae7c56ea3u';
 const VALIDATION_TOKEN = 'TokenTuyChon';
 const PAGE_ACCESS_TOKEN = 'EAAN622V8N4oBAAHZAo1fX9TZAoTDzv78ZBWldEx3aWPrRvbWHec2B7elvuFH0R0ZADcWcJhjLSpQ1RQ70fKWFk2AjNzrKS61MQRZCnA9OVWrSQnFNdh64eI0w2ZAB40iEw4dTXtzEvWJwa3amMOKnJA02V6Q0897VWV0lmswthBZB4ZAZANNFIZAecRYNAh7JvwXUZD';
 
-var fs = require('fs');
 var http = require('http');
-var https = require('https');
 var bodyParser = require('body-parser');
 var express = require('express');
 
@@ -13,7 +11,6 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 var server = http.createServer(app);
-var httpsServer = https.createServer(app);
 var request = require("request");
 app.get('/', (req, res) => {
   res.send("Home page. Server running okay.");
@@ -62,9 +59,9 @@ function sendMessage(senderId, message) {
   });
 }
 
-app.set('port', process.env.PORT || 8433);
+app.set('port', process.env.PORT || 5000);
 app.set('ip', process.env.IP || "0.0.0.0");
 
-httpsServer.listen(app.get('port'), function() {
+server.listen(app.get('port'), function() {
   console.log("Chat bot server listening at %s:%d ", app.get('ip'), app.get('port'));
 });

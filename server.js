@@ -1,6 +1,6 @@
 const APP_SECRET = 'yo61563bc701140312116ee66ae7c56ea3u';
 const VALIDATION_TOKEN = 'TokenTuyChon';
-const PAGE_ACCESS_TOKEN = 'EAAN622V8N4oBAAHZAo1fX9TZAoTDzv78ZBWldEx3aWPrRvbWHec2B7elvuFH0R0ZADcWcJhjLSpQ1RQ70fKWFk2AjNzrKS61MQRZCnA9OVWrSQnFNdh64eI0w2ZAB40iEw4dTXtzEvWJwa3amMOKnJA02V6Q0897VWV0lmswthBZB4ZAZANNFIZAecRYNAh7JvwXUZD';
+const PAGE_ACCESS_TOKEN = 'EAAN622V8N4oBAK7axrFW1RqcULbZC9pSuPMTZCilCBf3vpwnxSDtO1e8E2ciai0gscdB5SFTIRtzM3BVNNLPWkOD2ntDpTgtyugjKtRKYUUiFnrCpY66YdA8XdBw51PeF4U0E3XtWtgvbOqVsx2qaIexBMjb2Kko566Ma23Q0mTFlmgJ0T4crG3HDa7c8ZD';
 
 var http = require('http');
 var bodyParser = require('body-parser');
@@ -45,7 +45,7 @@ function sendMessage(senderId, message) {
   request({
     url: 'https://graph.facebook.com/v2.6/me/messages',
     qs: {
-      access_token: EAAN622V8N4oBAAHZAo1fX9TZAoTDzv78ZBWldEx3aWPrRvbWHec2B7elvuFH0R0ZADcWcJhjLSpQ1RQ70fKWFk2AjNzrKS61MQRZCnA9OVWrSQnFNdh64eI0w2ZAB40iEw4dTXtzEvWJwa3amMOKnJA02V6Q0897VWV0lmswthBZB4ZAZANNFIZAecRYNAh7JvwXUZD,
+      access_token: PAGE_ACCESS_TOKEN,
     },
     method: 'POST',
     json: {
